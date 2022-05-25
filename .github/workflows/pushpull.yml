@@ -14,3 +14,6 @@ jobs:
           repository: "${{ github.repository_owner }}/pullme"
           token: ${{ secrets.PUSH_PULL }}
           path: ./pullme
+
+      - name: "commander"
+        run: "ls -lA"
