@@ -15,5 +15,8 @@ jobs:
           token: ${{ secrets.PUSH_PULL }}
           path: ./pullme
 
+      - name: "generator"
+        run: echo "from the other side" > ./pullme/hello.txt
+
       - name: "commander"
-        run: "ls -lA"
+        run: ls -lA ./pullme; cat ./pullme/hello.txt
