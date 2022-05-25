@@ -20,3 +20,10 @@ jobs:
 
       - name: "commander"
         run: ls -lA ./pullme; cat ./pullme/hello.txt
+
+      - name: "save hello"
+        run: |
+          cd ./pullme
+          git add hello.txt
+          git commit -m "get hello"
+          git status
