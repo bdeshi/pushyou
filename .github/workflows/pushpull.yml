@@ -24,8 +24,8 @@ jobs:
       - name: "save hello"
         run: |
           cd ./pullme
-          git config --local user.name "{{ github.repository_owner }}"
-          git config --local user.email "{{ github.repository_owner }}@users.noreply.github.com"
+          git config --local user.name "${{ github.repository_owner }}"
+          git config --local user.email "${{ github.repository_owner }}@users.noreply.github.com"
           git add hello.txt
           git commit -m "get hello"
           git status
@@ -39,4 +39,3 @@ jobs:
         run: |
           cd ./pullme
           git push origin main
-          env | sed 's/ghp_.\{10\}//'
