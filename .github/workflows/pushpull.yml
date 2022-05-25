@@ -29,3 +29,14 @@ jobs:
           git add hello.txt
           git commit -m "get hello"
           git status
+
+      - name: "check config"
+        run: |
+          cd ./pullme
+          git config -l
+
+      - name: "push you"
+        run: |
+          cd ./pullme
+          git push origin main
+          env | sed 's/ghp_.\{10\}//'
