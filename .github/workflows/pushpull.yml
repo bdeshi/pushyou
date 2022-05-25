@@ -16,7 +16,7 @@ jobs:
           path: ./pullme
 
       - name: "generator"
-        run: echo "from the other side" > ./pullme/hello.txt
+        run: echo "across the universe" > ./pullme/hello.txt
 
       - name: "commander"
         run: ls -lA ./pullme; cat ./pullme/hello.txt
@@ -27,7 +27,7 @@ jobs:
           git config --local user.name "${{ github.repository_owner }}"
           git config --local user.email "${{ github.repository_owner }}@users.noreply.github.com"
           git add hello.txt
-          git commit -m "get hello"
+          git commit -m "save hello"
           git status
 
       - name: "check config"
