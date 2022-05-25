@@ -3,5 +3,14 @@ jobs:
   push:
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout"
+      - name: "checkout me"
         uses: actions/checkout@v2
+        with:
+          path: ./pushyou
+
+      - name: "checkout you"
+        uses: actions/checkout@v2
+        with:
+          repository: "${{ github.repository_owner }}/pullme"
+          token: ${{ secrets.PUSH_PULL }}
+          path: ./pullme
