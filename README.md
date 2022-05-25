@@ -1,2 +1,3 @@
 # pushyou
-pushme-pullyou
+
+i push to [pullme](../../../pullme)
